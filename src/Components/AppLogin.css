@@ -1,0 +1,85 @@
+.App1 {
+    text-align: center;
+}
+
+.App1-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App1-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App1-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App1-link {
+    color: #61dafb;
+}
+
+h3 {
+    padding-top: 60px;
+}
+
+h2, h4 {
+    text-align: center;
+    color: #D3D3D3;
+
+}
+
+h5.footer1 {
+    padding-top: 130px;
+}
+
+FormGroup {
+    background: #fff;
+    padding: 30px 40px;
+    width: 25%;
+    margin: 50px auto;
+    height: 300px;
+    border-radius: 5px;
+}
+
+label {
+    width: 10%;
+    margin-left: 470px;
+    display: block;
+    padding: 10px 0px;
+    font-size: 17px;
+    color: #111;
+    font-weight: bold;
+}
+
+input {
+    width: 25%;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0000FF;
+    color: #fff;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 20px 0;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 15%;
+}
