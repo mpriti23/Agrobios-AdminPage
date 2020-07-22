@@ -644,7 +644,7 @@ transactionHandle2 = () => {
                         <Sider>
                             <Menu
                                 mode="inline"
-                                defaultSelectedKeys={['Dashboard']}
+                                defaultSelectedKeys={['Manage Books']}
 
                             >
                                
@@ -672,12 +672,12 @@ transactionHandle2 = () => {
                                     <Collapse defaultActiveKey={['1']} onChange={callback}>
                                         <Panel header="Book Creation" key="1">
                                       <Row>
-                                       <Col span={4}><Checkbox onChange={onChange}></Checkbox> Active/Inactive</Col>
-                                       <Col span={4}> <Checkbox onChange={onChange}></Checkbox>Display/Hide</Col>
+                                       <Col span={4}><Checkbox onChange={onChange}></Checkbox>&nbsp; Active/Inactive</Col>
+                                       <Col span={4}> <Checkbox onChange={onChange}></Checkbox>&nbsp;Display/Hide</Col>
                                        </Row>
                                         <Row>
                                        
-                                                    <Col span={8}>Book Name* :&nbsp;&nbsp;&nbsp; <Input style={{width: 180, margin: 5}}
+                                                    <Col span={8}>Book Name* :<Input style={{width: 180, margin: 5}}
                                                                     placeholder="Objectives on Agricultural Engineering: (Exclusively for Agriculture Graduates)"/></Col>
                                                <Col span={8}> Book Type : <Select defaultValue="lucy" style={{width: 180, margin: 5}}
                                                                     onChange={handleChange}>
@@ -696,8 +696,8 @@ transactionHandle2 = () => {
                                             <Row>
                                                <Col span={8}> ISBN* :<Input style={{width: 223, margin: 5,}}
                                                               placeholder="9788194377634"/></Col>
-                                                <Col span={8}>Edition* :<Input style={{width: 190, margin: 5}} placeholder="1"/></Col>
-                                                <Col span={8}> Volume* :<Input style={{width: 205, margin: 5}} placeholder="1"/></Col>
+                                                <Col span={8}>Edition* :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Input style={{width: 180, margin: 5}} placeholder="1"/></Col>
+                                                <Col span={8}> Volume* :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Input style={{width: 190, margin: 5}} placeholder="1"/></Col>
                                             </Row>
                                           <Row>
                                            
@@ -706,7 +706,7 @@ transactionHandle2 = () => {
                                                 <Option value="jack">Jack</Option>
                                                 <Option value="lucy">AMERICAN ROYAL</Option>
                                             </Select></Col>
-                                            <Col span={8}>Weight :<Input style={{width: 100, margin: 5}} placeholder="150"/>
+                                            <Col span={8}>Weight :&nbsp;<Input style={{width: 100, margin: 5}} placeholder="150"/>
                                                 <Select defaultValue="lucy" style={{width: 90, margin: 5}}
                                                         onChange={handleChange}>
                                                     <Option value="jack">Jack</Option>
@@ -719,7 +719,7 @@ transactionHandle2 = () => {
                                             </Select></Col>
                                            </Row>
                                            <Row>
-                                              <Col span={8}>  Language* : <Select defaultValue="lucy" style={{width: 190, margin: 5}}
+                                              <Col span={8}>  Language* : <Select defaultValue="lucy" style={{width: 188, margin: 5}}
                                                                     onChange={handleChange}>
                                                 <Option value="jack">Jack</Option>
                                                 <Option value="lucy">ENGLISH</Option>
@@ -733,7 +733,7 @@ transactionHandle2 = () => {
                                           <Row>
                                           <Col span={8}>   Retail Price* :<Input style={{width: 185, margin: 5,}}
                                                                       placeholder="250.00"/> </Col>
-                                          <Col span={8}>      Whole Sale Price :<Input style={{width: 148, margin: 5}}
+                                          <Col span={8}>      Whole Sale Price :<Input style={{width: 145, margin: 5}}
                                                                          placeholder="250.00"/> </Col>
                                           <Col span={8}>  Total Pages :<Input style={{width: 195, margin: 5}} placeholder="10"/> </Col>
 
@@ -741,11 +741,11 @@ transactionHandle2 = () => {
 
                                             <Row>
                                                <Col span={8}> Color Pages :<Input style={{width: 185, margin: 5}} placeholder="0"/></Col>
-                                               <Col span={8}> Front Cover : <Button style={{width: 185, margin: 5}}>
+                                               <Col span={8}> Front Cover : <Button style={{width: 172, margin: 5}}>
                                                 <UploadOutlined/> Click to Upload
                                             </Button></Col>
 
-                                              <Col span={8}>  Publisher* :<Select defaultValue="lucy" style={{width: 215, margin: 5}}
+                                              <Col span={8}>  Publisher* :&nbsp;&nbsp;&nbsp;<Select defaultValue="lucy" style={{width: 190, margin: 5}}
                                                                     onChange={handleChange}>
                                                 <Option value="jack">Jack</Option>
                                                 <Option value="lucy">Agrobios(India)</Option>
@@ -753,18 +753,18 @@ transactionHandle2 = () => {
 
                                           </Row>
                                             <Row>
-                                            <Col span={8}>  Back Page : <Button style={{width: 185, margin: 5}}>
+                                            <Col span={8}>  Back Page :&nbsp;&nbsp; <Button style={{width: 185, margin: 5}}>
                                                 <UploadOutlined/> Click to Upload
                                             </Button></Col>
-                                            <Col span={8}>   Sample page : <Button style={{width: 185, margin: 5}}>
+                                            <Col span={8}>   Sample page : <Button style={{width: 165, margin: 5}}>
                                                 <UploadOutlined/> Click to Upload
                                             </Button> </Col>
-                                            <Col span={8}> Display On Homepage:  <DatePicker onChange={onChange}/></Col>
+                                            <Col span={8}> Display On Homepage:  <DatePicker style={{width: 125, margin: 5}} onChange={onChange}/></Col>
                                            </Row>
                                            <Row>
-                                           <Col span={8}> Featured :&nbsp;&nbsp;<DatePicker onChange={onChange1}/></Col>
-                                           <Col span={8}> Forthcoming :&nbsp;&nbsp;<DatePicker onChange={onChange1}/></Col>
-                                           <Col span={8}> New Release :&nbsp;&nbsp;<DatePicker onChange={onChange1}/></Col>
+                                           <Col span={8}> Featured :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DatePicker style={{width: 185, margin: 5}} onChange={onChange1}/></Col>
+                                           <Col span={8}> Forthcoming :&nbsp;<DatePicker style={{width: 165, margin: 5}} onChange={onChange1}/></Col>
+                                           <Col span={8}> New Release :&nbsp;&nbsp;<DatePicker style={{width: 180, margin: 5}} onChange={onChange1}/></Col>
                                           </Row>
 
                                         </Panel>

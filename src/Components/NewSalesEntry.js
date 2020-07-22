@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Layout} from 'antd';
-import {Typography, Input} from 'antd';
+import {Typography, Input,Row,Col,DatePicker} from 'antd';
 import {Menu, Breadcrumb, Button} from 'antd';
 import {Select} from 'antd';
 import {Table} from 'antd';
@@ -391,6 +391,78 @@ const data6 = [
     },
 
 ];
+const columns1 = [
+    {
+        title: 'S No:',
+        dataIndex: 'sno',
+        key: 'sno',
+    },
+    {
+        title: 'Code:',
+        dataIndex: 'rcptno',
+        key: 'rcptno',
+    },
+    {
+        title: 'Name',
+        dataIndex: 'reca',
+        key: 'reca',
+    },
+    {
+        title: 'Avl Qty',
+        dataIndex: 'recd',
+        key: 'recd',
+    },
+    {
+        title: 'Qty',
+        dataIndex: 'party',
+        key: 'party',
+    },
+    {
+        title: 'Price',
+        dataIndex: 'desc',
+        key: 'desc',
+    },
+    {
+        title: 'Dis.(%)',
+        dataIndex: 'bill',
+        key: 'bill',
+    },
+    {
+        title: 'Amount',
+        dataIndex: 'inv',
+        key: 'inv',
+    },
+    {
+        title: 'Remove',
+        dataIndex: 'status',
+        key: 'status',
+    },
+   
+];
+const columns2 = [
+    {
+        title: 'AddOn Head',
+        dataIndex: 'sno',
+        key: 'sno',
+    },
+    {
+        title: 'Type',
+        dataIndex: 'rcptno',
+        key: 'rcptno',
+    },
+    {
+        title: 'Amount',
+        dataIndex: 'reca',
+        key: 'reca',
+    },
+    {
+        title: 'Remove',
+        dataIndex: 'recd',
+        key: 'recd',
+    }
+    
+   
+];
 
 
 const rowSelection = {
@@ -586,6 +658,36 @@ function handleChange(value) {
 
 
 class App4 extends Component {
+    state = {
+        value: 2,
+      };
+    
+      onChange = e => {
+        console.log('radio checked', e.target.value);
+        this.setState({
+          value: e.target.value,
+        });
+      };
+      transactionHandle = () => {
+    
+        this.props.history.push('/Transaction');
+      
+      }
+    transactionHandle3 = () => {
+
+        this.props.history.push('/NewReceipt');
+
+    }
+    transactionHandle1 = () => {
+
+        this.props.history.push('/Receipt');
+    
+    }
+    transactionHandle2 = () => {
+    
+      this.props.history.push('/Dashboard');
+    
+    }
 
     render() {
         return (
@@ -593,29 +695,21 @@ class App4 extends Component {
 
                 <Layout>
                     <Header style={{padding: 10}}>
-                        <Title style={{color: 'white'}} level={5}>LOGO</Title>
+                        <Title style={{color: 'white'}} level={5}>AGROBIOS</Title>
                     </Header>
                     <Layout>
                         <Sider>
                             <Menu
                                 mode="inline"
-                                defaultSelectedKeys={['Dashboard']}
+                                defaultSelectedKeys={['2']}
 
                             >
-                                <Menu.Item key="Dashboard">Dashboard</Menu.Item>
-                                <SubMenu
-                                    key="sub1"
-                                    title={
-                                        <span>
-              <span>Products</span>
-            </span>
-                                    }
-                                >
-                                    <Menu.Item key="1">Manage Books</Menu.Item>
-                                </SubMenu>
+                              
+                                    <Menu.Item key="1" onClick={this.transactionHandle2}>Manage Books</Menu.Item>
+                               
 
-                                <Menu.Item key="1" onClick={this.transactionHandle}>Transactions</Menu.Item>
-                                <Menu.Item key="1" onClick={this.transactionHandle}>Receipts</Menu.Item>
+                                <Menu.Item key="2" onClick={this.transactionHandle}>Transactions</Menu.Item>
+                                <Menu.Item key="3" onClick={this.transactionHandle1}>Receipts</Menu.Item>
                                 <Menu.Item key="Ledgers">Ledgers</Menu.Item>
 
                             </Menu>
@@ -634,114 +728,105 @@ class App4 extends Component {
                                     <Collapse defaultActiveKey={['1']} onChange={callback}>
                                         <Panel header="Sales New Entry" key="1">
 
-                                            <Checkbox title="Active" onChange={onChange}></Checkbox>
-                                            <Checkbox onChange={onChange}>Display/Hide</Checkbox>
+                                         
 
-                                            <div>Book Name* :<Input style={{width: 180, margin: 5}}
-                                                                    placeholder="Objectives on Agricultural Engineering: (Exclusively for Agriculture Graduates)"/>
-                                                Book Type : <Select defaultValue="lucy" style={{width: 180, margin: 5}}
+                                          <div>
+                                              Customer: <Select defaultValue="Distributor" style={{width: 150, margin: 5}}
                                                                     onChange={handleChange}>
                                                     <Option value="jack">Jack</Option>
                                                     <Option value="lucy">Question Bank</Option>
                                                 </Select>
-                                                Book Code* : <Input style={{width: 190, margin: 5}}
-                                                                    placeholder="7634a"/>
-                                            </div>
-                                            <div>
-                                                ISBN* :<Input style={{width: 223, margin: 5,}}
+                                                  <Input style={{width: 150, margin: 5}}
+                                                                    placeholder="Client Name"/>
+                                                Date:<DatePicker style={{width: 150, margin: 5,}}/>
+                                                Bill Company:<Input style={{width: 150, margin: 5,}}
                                                               placeholder="9788194377634"/>
-                                                EDITION* :<Input style={{width: 190, margin: 5}} placeholder="1"/>
-                                                VOLUME* :<Input style={{width: 205, margin: 5}} placeholder="1"/>
-
+                                                Bill Number:<Input style={{width: 150, margin: 5,}}
+                                                              placeholder="9788194377634"/>
                                             </div>
-                                            <div>
-                                                Size : <Select defaultValue="lucy" style={{width: 230, margin: 5}}
-                                                               onChange={handleChange}>
-                                                <Option value="jack">Jack</Option>
-                                                <Option value="lucy">AMERICAN ROYAL</Option>
-                                            </Select>
-                                                Weight :<Input style={{width: 100, margin: 5}} placeholder="150"/>
-                                                <Select defaultValue="lucy" style={{width: 90, margin: 5}}
-                                                        onChange={handleChange}>
-                                                    <Option value="jack">Jack</Option>
-                                                    <Option value="lucy">Gms</Option>
-                                                </Select>
-                                                Binding : <Select defaultValue="lucy" style={{width: 215, margin: 5}}
-                                                                  onChange={handleChange}>
-                                                <Option value="jack">Jack</Option>
-                                                <Option value="lucy">Paper Bond</Option>
-                                            </Select>
-                                            </div>
-                                            <div>
-                                                Language* : <Select defaultValue="lucy" style={{width: 190, margin: 5}}
-                                                                    onChange={handleChange}>
-                                                <Option value="jack">Jack</Option>
-                                                <Option value="lucy">ENGLISH</Option>
-                                            </Select>
-                                                Current Pub. Year :<Input style={{width: 140, margin: 5}}
-                                                                          placeholder="2020"/>
-                                                Ist Publishing Year : <Input style={{width: 150, margin: 5}}
-                                                                             placeholder="2020"/>
-                                            </div>
-                                            <div>
-                                                Retail Price* :<Input style={{width: 185, margin: 5,}}
-                                                                      placeholder="250.00"/>
-                                                Whole Sale Price :<Input style={{width: 148, margin: 5}}
-                                                                         placeholder="250.00"/>
-                                                Total Pages :<Input style={{width: 195, margin: 5}} placeholder="10"/>
-
-                                            </div>
-
-                                            <div>
-                                                Color Pages :<Input style={{width: 185, margin: 5}} placeholder="0"/>
-                                                Front Cover : <Button style={{width: 185, margin: 5}}>
-                                                <UploadOutlined/> Click to Upload
-                                            </Button>
-
-                                                Publisher* :<Select defaultValue="lucy" style={{width: 215, margin: 5}}
-                                                                    onChange={handleChange}>
-                                                <Option value="jack">Jack</Option>
-                                                <Option value="lucy">Agrobios(India)</Option>
-                                            </Select>
-
-                                            </div>
-                                            <div>
-                                                Back Page : <Button style={{width: 185, margin: 5}}>
-                                                <UploadOutlined/> Click to Upload
-                                            </Button>
-                                                Sample page : <Button style={{width: 185, margin: 5}}>
-                                                <UploadOutlined/> Click to Upload
-                                            </Button>
-                                                Display On Homepage :<Radio.Group style={{width: 150, margin: 5}}>
-                                                <Radio value={1}>Yes</Radio>
-                                                <Radio value={2}>No</Radio>
-                                            </Radio.Group>
-                                            </div>
-                                            <div>
-                                                Featured :<Radio.Group style={{width: 200, margin: 5}}>
-                                                <Radio value={1}>Yes</Radio>
-                                                <Radio value={2}>No</Radio>
-                                            </Radio.Group>
-                                                Forthcoming :<Radio.Group style={{width: 180, margin: 5}}>
-                                                <Radio value={1}>Yes</Radio>
-                                                <Radio value={2}>No</Radio>
-                                            </Radio.Group>
-                                                New Release :<Radio.Group style={{width: 180, margin: 5}}>
-                                                <Radio value={1}>Yes</Radio>
-                                                <Radio value={2}>No</Radio>
-                                            </Radio.Group>
-                                            </div>
-
+                                           <b>Product Info</b>
+                                         <Input placeholder="Enter Item Code"></Input>
+                                         <br/>
+                                         <br/>
+                                         <Table columns={columns1} />
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <div>Additional AddOn: <Input style={{width: 223, margin: 5,}}
+                                                              placeholder="Enter Add On here"/>
+                                                <Input style={{width: 150, margin: 5,}}
+                                                              placeholder="Enter Value"/>  <Button style={{width:80}}>+ Add</Button>
+                                                             <b style={{marginLeft:225}}>  Total: </b> <Input style={{ width: 150,marginLeft:45}}></Input> 
+                                                              </div>
+                                                              <br/>
+                                         <br/>
+                                         <Table columns={columns2} />
+                                         <br/>
+                                         <b style={{marginLeft:825}}> Grand Total: </b> <Input style={{ width: 150}}></Input>   
                                         </Panel>
 
                                         <Panel header="Invoice Options" key="5">
-                                            <p>Entrepreneurs</p>
-                                            <p>Extension Workers</p>
-                                            <p>Field Workers</p>
-                                            <p>General Readers</p>
-                                            <p>PG Students</p>
-                                            <p>Scientists and Researchers</p>
-                                            <p>UG Students</p>
+                                        <Row>
+                                         <Col span={8}>Reference No. :&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <Input style={{width: 150, margin: 5,}}
+                                                              placeholder="Ref. No"/>  </Col>
+                                           <Col span={8}>Reference Date:&nbsp;&nbsp;&nbsp;   <DatePicker style={{width: 150, margin: 5,}}
+                                                              />  </Col>
+                                     
+                                             
+                                        </Row>
+                                        <Row>
+                                        <Col span={8}>Dispatch By :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select defaultValue="Indian Postal Services" style={{width: 150, margin: 5}}
+                                                                    onChange={handleChange}>
+                                                    <Option value="jack">Jack</Option>
+                                                    <Option value="lucy">Question Bank</Option>
+                                                </Select></Col>
+                                           <Col span={8}>Courier/Agency:&nbsp;&nbsp;&nbsp;<Select defaultValue="--N/A--" style={{width: 150, margin: 5}}
+                                                                    onChange={handleChange}>
+                                                    <Option value="jack">Jack</Option>
+                                                    <Option value="lucy">Question Bank</Option>
+                                                </Select>
+                                                </Col>
+
+                                                
+                                              
+                                               
+                                               
+                                        </Row>
+                                        <Row>
+                                        <Col span={8}>Dispatch No. : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Input style={{width: 153, margin: 5,}}
+                                                              placeholder="Dispatch No."/>  </Col>
+                                           <Col span={8}>Dispatch Date: &nbsp;&nbsp;&nbsp; <DatePicker style={{width: 150, margin: 5,}}
+                                                              />  </Col>
+                                           
+                                        </Row>
+                                        <Row>
+                                        <Col span={8}>Number Of Packets: <Input style={{width: 150, margin: 5}}
+                                                              placeholder="Number Of Packets"/>  </Col>
+                                           <Col span={8}>Transaction Type: <Select defaultValue="Credit" style={{width: 150, margin: 5}}
+                                                                    onChange={handleChange}>
+                                                    <Option value="jack">Jack</Option>
+                                                    <Option value="lucy">Question Bank</Option>
+                                                </Select>
+                                                </Col>
+                                       
+                                        </Row>
+                                        <Row>
+                                        <Col span={8}><b>Remarks :</b>
+                                        <textarea style={{width:300}} placeholder="Write the description if required"></textarea>
+                                                </Col>
+                                        <Col span={8}><b>Advance Amt.(If any):</b>&nbsp;&nbsp;&nbsp;
+                                            <Radio.Group onChange={this.onChange} value={this.state.value} >
+                                                        <Radio value={1} >Yes</Radio>
+                                                        <Radio value={2} style={{margin:30}}>No</Radio>
+                                                       
+                                             </Radio.Group> 
+                                             </Col>
+                                            </Row>
+                                        <Row style={{marginLeft:500}}>
+                                        <Col><Button style={{width:100,margin:20}}>Cancel POS</Button></Col>
+                                        <Col><Button style={{width:100,margin:20}}>Save</Button></Col>
+                                        <Col><Button style={{width:200,margin:20}}>Save & Print Invoice</Button></Col></Row>
+                                           
                                         </Panel>
 
                                     </Collapse>

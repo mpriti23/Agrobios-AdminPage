@@ -80,7 +80,10 @@ class App1 extends Component {
         this.props.history.push('/AddNew');
 
     }
-    transactionHandle = () => {
+    loginHandle1 = () => {
+        this.props.history.push('/Edit');
+    }
+     transactionHandle = () => {
 
         this.props.history.push('/Transaction');
 
@@ -157,13 +160,13 @@ class App1 extends Component {
                                                         <Option value="Yiminghe">yiminghe</Option>
 
                                                     </Select></Col>
-                                                    <Col span={8}>ISBN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Input style={{width: 180, margin: 5}}
+                                                    <Col span={8}>ISBN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Input style={{width: 220, margin: 5}}
                                                                                placeholder="ISBN"/></Col>
                                                 </Row>
                                                 <Row>
-                                                    <Col span={8}>Author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <AutoComplete
+                                                    <Col span={8}>Author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<AutoComplete
                                                         style={{
-                                                            width: 180,
+                                                            width: 200,
                                                             margin: 5
                                                         }}
                                                         placeholder="input here"
@@ -183,7 +186,7 @@ class App1 extends Component {
                                  
                                                 </Row>
                                                 <Row>
-                                                    <Col span={8}>Binding:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 180, margin: 5}}
+                                                    <Col span={8}>Binding:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 200, margin: 5}}
                                                                                    onChange={handleChange}>
 
                                                         <Option value="jack">Jack</Option>
@@ -201,7 +204,7 @@ class App1 extends Component {
                                                 <Row>
                                                     <Col span={8}>Book name: <AutoComplete
                                                         style={{
-                                                            width: 180,
+                                                            width: 200,
                                                             margin: 5
                                                         }}
                                                         placeholder="input here"
@@ -216,13 +219,14 @@ class App1 extends Component {
                                                         <Option value="jack">Jack</Option>
                                                         <Option value="lucy">Lucy</Option>
                                                     </Select></Col>
-                                                    <Col span={8}>Year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 80, margin: 5}}
-                                                                                onChange={handleChange}>
+                                                    <Col span={8}>Year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 110, margin: 5}}
+                                                                                onChange={handleChange}>  
 
 
                                                         <Option value="jack">Jack</Option>
                                                         <Option value="lucy">Lucy</Option>
-                                                    </Select></Col>
+                                                    </Select>
+                                                    <Button type="primary" style={{width: 100, margin: 5}}>Search</Button></Col>
                                                 </Row>
                                             </AccordionItemPanel>
                                         </AccordionItem>
@@ -253,7 +257,7 @@ class App1 extends Component {
                                             key="action"
                                             render={(text, record) => (
                                                 <Space size="middle">
-                                                    <a>Add </a>
+                                                    <a onClick={this.loginHandle1}>Edit </a>
                                                     <a>Delete</a>
                                                 </Space>
                                             )}

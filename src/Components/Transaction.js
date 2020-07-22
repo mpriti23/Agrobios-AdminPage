@@ -98,6 +98,11 @@ class App3 extends Component {
       this.props.history.push('/Dashboard');
 
   }
+  transactionHandle3= () => {
+
+    this.props.history.push('/NewSalesEntry');
+
+}
 
     render() {
         return (
@@ -105,7 +110,7 @@ class App3 extends Component {
 
                 <Layout>
                     <Header style={{padding: 10}}>
-                        <Title style={{color: 'white'}} level={5}>LOGO</Title>
+                        <Title style={{color: 'white'}} level={5}>AGROBIOS</Title>
                     </Header>
                     <Layout>
                         <Sider>
@@ -128,9 +133,7 @@ class App3 extends Component {
                         </Sider>
                         <Layout>
                             <Content style={{padding: '0 20px'}}>
-                                <Breadcrumb style={{margin: '0 0'}}>
-                                    <Breadcrumb.Item style={{color: 'red'}}><b>Books</b></Breadcrumb.Item>
-                                </Breadcrumb>
+                             
                                 <div className="site-layout-content" style={{
                                     background: '#fff',
                                     padding: 2,
@@ -165,13 +168,13 @@ class App3 extends Component {
 
                                                     </Select></Col>
 
-                                                      <Col span={8}>  Bill Date:From: <DatePicker onChange={onChange}/></Col>
-                                                      <Col span={8}> To: <DatePicker onChange={onChange}/></Col>
+                                                      <Col span={8}>  Bill Date: From: <DatePicker style={{width: 180, margin: 5}} onChange={onChange}/></Col>
+                                                      <Col span={8}> To:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <DatePicker style={{width: 180, margin: 5}} onChange={onChange}/></Col>
 
                                                       
                                                    </Row>
                                                    <Row>
-                                                   <Col span={8}>  Sale type: <Select style={{width: 180, margin: 5}}
+                                                   <Col span={8}>  Sale type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Select style={{width: 180, margin: 5}}
                                                                           onChange={handleChange}>
 
 
@@ -179,7 +182,7 @@ class App3 extends Component {
                                                         <Option value="lucy">Lucy</Option>
                                                     </Select></Col>
 
-                                                    <Col span={8}>    Status: <Select style={{width: 180, margin: 5}}
+                                                    <Col span={8}>    Status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Select style={{width: 180, margin: 5}}
                                                                         onChange={handleChange}>
 
 
@@ -189,20 +192,20 @@ class App3 extends Component {
                                                     <Col span={8}>   Bill amount&nbsp;&nbsp;From :<Input
                                                         style={{width: 50, margin: 5}}/>   To: <Input
                                                         style={{width: 50, margin: 5}}/></Col>
-                                                      <Col span={8}>   Pay type: <Select style={{width: 180, margin: 5}}
+                                                      <Col span={8}>   Pay type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 180, margin: 5}}
                                                                           onChange={handleChange}>
                                                         <Option value="jack">Jack</Option>
                                                         <Option value="lucy">Lucy</Option></Select></Col>
-                                                       <Col span={8}> Client type: <Select style={{width: 180, margin: 5}}
+                                                       <Col span={8}> Client type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Select style={{width: 180, margin: 5}}
                                                                              onChange={handleChange}>
 
                                                         <Option value="jack">Jack</Option>
                                                         <Option value="lucy">Lucy</Option>
                                                     </Select></Col>
-                                                        <Input style={{width: 280, margin: 5}}/>
+                                                        <Input style={{width: 300, margin: 5}}/>
                                                    </Row>
                                                   
-
+                                                   <Button style={{marginLeft:450,width:180}}>Search</Button>
                                                   
 
                                                 </div>
@@ -211,7 +214,7 @@ class App3 extends Component {
                                     </Accordion>
                                
                                     <div style={{paddingTop: 10}}>
-                                        <Button onClick={this.transactionHandle1}>New Sales Entry</Button>
+                                        <Button onClick={this.transactionHandle3}>New Sales Entry</Button>
                                     </div>
                                     <div style={{fontSize: 20, paddingTop: 10}}>
                                         <b>

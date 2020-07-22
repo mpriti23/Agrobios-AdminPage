@@ -168,21 +168,23 @@ class App5 extends Component {
                                                 </AccordionItemButton>
                                             </AccordionItemHeading>
                                             <AccordionItemPanel>
-                                            <Button type="primary">Search</Button>
-                                   <Row><Col span={8}><Select defaultValue="lucy" style={{width: 180}} onChange={handleChange}>
+                                            
+                                   <Row><Col span={8}>
+                                       <b>Bill Company:&nbsp;</b>
+                                       <Select defaultValue="lucy" style={{width: 155}} onChange={handleChange}>
                                         <Option value="jack">Jack</Option>
                                         <Option value="lucy">Bill Company</Option>
                                         <Option value="Yiminghe">yiminghe</Option>
                                     </Select></Col>
                                         <Col span={4}><b>Bill Date </b></Col>
                                         <Col span={12}>
-                                        From: <DatePicker onChange={onChange}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        To: <DatePicker onChange={onChange}/>
+                                        From: <DatePicker  style={{width:155}} onChange={onChange}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        To: <DatePicker style={{width:155}} onChange={onChange}/>
                                     </Col>
                                     </Row>
                                     <Row>
                                         <Col span={8}>
-                                        <b>Bill No:&nbsp;</b><Input style={{width: 200, padding: 5}}/>
+                                        <b>Bill No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><Input style={{width: 155, padding: 5}}/>
                                         </Col>
                                         <Col span={4}>
                                         <b>Bill Amount</b> </Col>
@@ -192,8 +194,8 @@ class App5 extends Component {
                                     </Row>
                                       <Row>
                                           <Col span={8}>
-                                          <b>Receipt No:&nbsp;</b><Input
-                                        style={{width: 173, padding: 5}}/>
+                                          <b>Receipt No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><Input
+                                        style={{width: 155, padding: 5}}/>
                                         </Col>
                                     <Col span={4}>
                                     <b>Receipt Amount</b></Col>
@@ -202,8 +204,8 @@ class App5 extends Component {
                                     </Col > 
                                       </Row>
                                       <Row>
-                                          <Col span={8}>
-                                    &nbsp;<Select defaultValue="lucy" style={{width: 250}} onChange={handleChange}>
+                                          <Col span={8}><b>Client Type:&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                                    &nbsp;<Select defaultValue="lucy" style={{width: 154}} onChange={handleChange}>
                                         <Option value="jack">Jack</Option>
                                         <Option value="lucy">--Select Client Type--</Option>
                                         <Option value="Yiminghe">yiminghe</Option>
@@ -211,12 +213,12 @@ class App5 extends Component {
                                     <Col span={5}>
                                        <b>Client Name:</b> </Col>
                                        <Col span={10}>
-                                       &nbsp;<Input style={{width: 190}} placeholder="Client Name"/>
+                                       &nbsp;<Input style={{width: 353}} placeholder="Client Name"/>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col span={8}>
-                                       <b>Ref No: </b><Input style={{width: 200}} placeholder="Ref No."/>
+                                       <b>Ref No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><Input style={{width: 155}} placeholder="Ref No."/>
                                         </Col>
                                         <Col span={5}>
                                         <b>Payment Mode:</b>
@@ -230,6 +232,7 @@ class App5 extends Component {
                                         </Select>
                                     
                                         </Col>
+                                        <Button type="primary">Search</Button>
                                     </Row>
                                     
                                         
