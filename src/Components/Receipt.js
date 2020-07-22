@@ -171,41 +171,41 @@ class App5 extends Component {
                                             
                                    <Row><Col span={8}>
                                        <b>Bill Company:&nbsp;</b>
-                                       <Select defaultValue="lucy" style={{width: 155}} onChange={handleChange}>
+                                       <Select defaultValue="lucy" style={{width: 155,margin:5}} onChange={handleChange}>
                                         <Option value="jack">Jack</Option>
                                         <Option value="lucy">Bill Company</Option>
                                         <Option value="Yiminghe">yiminghe</Option>
                                     </Select></Col>
-                                        <Col span={4}><b>Bill Date </b></Col>
+                                        <Col span={4}><b style={{margin:5}}>Bill Date </b></Col>
                                         <Col span={12}>
-                                        From: <DatePicker  style={{width:155}} onChange={onChange}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        From: <DatePicker  style={{width:152,margin:4}} onChange={onChange}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         To: <DatePicker style={{width:155}} onChange={onChange}/>
                                     </Col>
                                     </Row>
                                     <Row>
                                         <Col span={8}>
-                                        <b>Bill No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><Input style={{width: 155, padding: 5}}/>
+                                        <b >Bill No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><Input style={{width: 155, padding: 5,margin:5}}/>
                                         </Col>
                                         <Col span={4}>
-                                        <b>Bill Amount</b> </Col>
+                                        <b style={{margin:5}}>Bill Amount</b> </Col>
                                         <Col span={12}>
-                                            From:&nbsp;<Input style={{width: 155,padding:5}}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:&nbsp;<Input style={{width: 155}}/>
+                                            From:<Input style={{width: 155,padding:5,margin:5}}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:&nbsp;<Input style={{width: 155}}/>
                                         </Col>
                                     </Row>
                                       <Row>
                                           <Col span={8}>
                                           <b>Receipt No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><Input
-                                        style={{width: 155, padding: 5}}/>
+                                        style={{width: 155, padding: 5,margin:5}}/>
                                         </Col>
                                     <Col span={4}>
                                     <b>Receipt Amount</b></Col>
-                                    <Col span={12}>  From:&nbsp;<Input style={{width: 155,padding:5}}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:&nbsp;<Input
+                                    <Col span={12}>  From:<Input style={{width: 155,padding:5,margin:5}}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:&nbsp;<Input
                                         style={{width: 155}}/>
                                     </Col > 
                                       </Row>
                                       <Row>
                                           <Col span={8}><b>Client Type:&nbsp;&nbsp;&nbsp;&nbsp;</b>
-                                    &nbsp;<Select defaultValue="lucy" style={{width: 154}} onChange={handleChange}>
+                                    &nbsp;<Select defaultValue="lucy" style={{width: 154,margin:5}} onChange={handleChange}>
                                         <Option value="jack">Jack</Option>
                                         <Option value="lucy">--Select Client Type--</Option>
                                         <Option value="Yiminghe">yiminghe</Option>
@@ -213,18 +213,18 @@ class App5 extends Component {
                                     <Col span={5}>
                                        <b>Client Name:</b> </Col>
                                        <Col span={10}>
-                                       &nbsp;<Input style={{width: 353}} placeholder="Client Name"/>
+                                       <Input style={{width:360,margin:5}} placeholder="Client Name"/>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col span={8}>
-                                       <b>Ref No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><Input style={{width: 155}} placeholder="Ref No."/>
+                                       <b>Ref No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><Input style={{width: 155,margin:5}} placeholder="Ref No."/>
                                         </Col>
                                         <Col span={5}>
                                         <b>Payment Mode:</b>
                                         </Col>
                                         <Col span={10}>
-                                        &nbsp;<Select defaultValue="lucy" style={{width: 190}}
+                                        <Select defaultValue="lucy" style={{width: 190,margin:5}}
                                                              onChange={handleChange}>
                                             <Option value="jack">Jack</Option>
                                             <Option value="lucy">--Select--</Option>

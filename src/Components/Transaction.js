@@ -116,7 +116,7 @@ class App3 extends Component {
                         <Sider>
                             <Menu
                                 mode="inline"
-                                defaultSelectedKeys={['2']}
+                                defaultSelectedKeys={['Dashboard']}
 
                             >
                                
